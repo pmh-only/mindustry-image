@@ -6,7 +6,7 @@ COPY ./start.sh /bin/start.sh
 
 ARG VERSION
 
-RUN wget wget https://github.com/Anuken/Mindustry/releases/download/${VERSION}/server-release.jar -O /bin/server.jar
+RUN wget https://github.com/Anuken/Mindustry/releases/download/${VERSION}/server-release.jar -O /bin/server.jar
 
 RUN chmod a+rwx /bin/start.sh /bin/server.jar
 
