@@ -19,7 +19,7 @@ docker run -itp 6567:6567 -v .:/app ghcr.io/pmh-only/mindustry -Xms1G -Xmx1G
 version: '3'
 
 services:
-  minecraft:
+  mindustry:
     image: ghcr.io/pmh-only/mindustry
     command: -Xms1G -Xmx1G
     restart: always
