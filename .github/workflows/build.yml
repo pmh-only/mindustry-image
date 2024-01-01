@@ -27,7 +27,7 @@ jobs:
         name: Run check script
         run: |
           chmod +x check.sh
-          ./chech.sh
+          ./check.sh
 
       - uses: actions-js/push@master
         name: Commit & Push changes
