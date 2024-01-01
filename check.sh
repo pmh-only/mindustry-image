@@ -8,4 +8,6 @@ CURRENT_VERSION=$(curl https://api.github.com/repos/Anuken/Mindustry/releases/la
 echo "VERSION_UPDATED=$?" >> "$GITHUB_OUTPUT"
 echo "VERSION=$CURRENT_VERSION" >> "$GITHUB_OUTPUT"
 
+cat $GITHUB_OUTPUT
+
 echo $CURRENT_VERSION > latest
