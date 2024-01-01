@@ -3,9 +3,13 @@
 PREVIOUS_VERSION=$(cat latest)
 CURRENT_VERSION=$(curl https://api.github.com/repos/Anuken/Mindustry/releases/latest | jq ".tag_name" -r)
 
-[[ $PREVIOUS_VERSION != $CURRENT_VERSION ]]
+VERSION_UPDATED="0"
 
-echo "VERSION_UPDATED=$?" >> "$GITHUB_OUTPUT"
+if [[ $PREVIOUS_VERSION != $CURRENT_VERSION ]]; then
+  VERSION_UPDATED="1"
+fi
+
+echo "VERSION_UPDATED=$VERSION_UPDATED" >> "$GITHUB_OUTPUT"
 echo "VERSION=$CURRENT_VERSION" >> "$GITHUB_OUTPUT"
 
 cat $GITHUB_OUTPUT
